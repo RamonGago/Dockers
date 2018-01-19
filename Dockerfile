@@ -4,8 +4,9 @@ MAINTAINER Ramón Gago Carrera <ramongagocarrera@gmail.com>
 
 WORKDIR /usr/src/app
 
-# Instala python-pip
-RUN pip3 install --no-cache-dir
+RUN apk update
+RUN apk upgrade
+
 
 # Instala flask y las librerías necesarias
 RUN pip3 install flask flask-restful flask-jsonpify pymongo
