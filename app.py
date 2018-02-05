@@ -7,16 +7,16 @@ app = Flask(__name__)
 client = MongoClient(
     os.environ['DB_PORT_27017_TCP_ADDR'],
     27017)
-db = client.erasmusdb
+db = client.tododb
 
 
 @app.route('/')
 def todo():
 
-    _items = db.erasmusdb.find()
+    _items = db.tododb.find()
     items = [item for item in _items]
 
-    return render_template('erasmus.html', items=items)
+    return render_template('todo.html', items=items)
 
 
 @app.route('/new', methods=['POST'])
@@ -28,7 +28,7 @@ def new():
     }
     db.tododb.insert_one(item_doc)
 
-    return redirect(url_for('erasmus'))
+    return redirect(url_for('todo'))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
