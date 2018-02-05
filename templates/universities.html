@@ -1,10 +1,8 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/static/css/bootstrap.css">
         <link rel="stylesheet" href="/static/css/bootstrap-theme.css">
         <title>Destinos Erasmus UGR</title>
@@ -17,27 +15,31 @@
           <h1 class="header clearfix">Añadir destino ERASMUS</h1>
           <div class="form-group">
             <form action="/new" method="POST">
-              <label for="nameUniversity">Nombre Universidad</label>
-              <input type="text" class="form-control" name="name" id="nameUniversity" placeholder="Nombre Universidad"></input>
-              <label for="description">Descripción</label>
-              <input type="text" class="form-control" name="description" id="description" placeholder="Descripción"></input>
+              <div class="col-xs-4">
+                <label for="nameUniversity">Nombre Universidad</label>
+                <input type="text" class="form-control" name="name" id="nameUniversity" placeholder="Nombre Universidad"></input>
+              </div>
+              <div class="col-md-6">
+                <label for="description">Descripción</label>
+                <input type="text" class="form-control" name="description" id="description" placeholder="Descripción"></input>
+              </div>
               <button type="submit" class="btn btn-primary mb-2">Añadir</button>
             </form>
+            <caption>Lista de Universidades</caption>
             <table class="table">
-              <caption>Lista de Universidades</caption>
               <thead>
                 <tr>
-                  <th scope="col">#</th>
                   <th scope="col">Nombre Universidad</th>
                   <th scope="col">Descripción</th>
+                  <th scope="col">Número de plazas</th>
                 </tr>
               </thead>
               <tbody>
                 {% for item in items %}
                   <tr>
-                    <th scope="row">1</th>
                     <td>{{ item.name }}</td>
                     <td>{{ item.description }}</td>
+                    <td>{{ item.numplaces }}</td>
                   </tr>
                 {% endfor %}
               </tbody>
