@@ -16,12 +16,16 @@
           <h1 class="header clearfix">Añadir destino ERASMUS</h1>
           <div class="form-group">
             <form action="/new" method="POST">
-              <div class="col-xs-12">
+              <div class="col-6">
                 <label for="nameUniversity">Nombre Universidad</label>
                 <input type="text" class="form-control" name="name" id="nameUniversity" placeholder="Nombre Universidad"></input>
               </div>
-              <div class="col-xs-9">
+              <div class="col-6">
                 <label for="description">Descripción</label>
+                <input type="text" class="form-control" name="description" id="description" placeholder="Descripción"></input>
+              </div>
+              <div class="col-6">
+                <label for="description">Número de plazas</label>
                 <input type="text" class="form-control" name="description" id="description" placeholder="Descripción"></input>
               </div>
               <button type="submit" class="btn btn-primary mb-2">Añadir</button>
