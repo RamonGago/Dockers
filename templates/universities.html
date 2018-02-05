@@ -10,20 +10,40 @@
         <title>Destinos Erasmus UGR</title>
     </head>
     <body>
-      <div class="container">
-        <div class="header clearfix">
-          <h3>Destinos Erasmus UGR</h3>
+        <div class="jumbotron">
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/status/" role="button">Status</a>
+          </p>
+          <h1 class="header clearfix">Añadir destino ERASMUS</h1>
+          <div class="form-group">
+            <form action="/new" method="POST">
+              <label for="nameUniversity">Nombre Universidad</label>
+              <input type="text" class="form-control" name="name" id="nameUniversity" placeholder="Nombre Universidad"></input>
+              <label for="description">Descripción</label>
+              <input type="text" class="form-control" name="description" id="description" placeholder="Descripción"></input>
+              <button type="submit" class="btn btn-primary mb-2">Añadir</button>
+            </form>
+            <table class="table">
+              <caption>Lista de Universidades</caption>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre Universidad</th>
+                  <th scope="col">Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in items %}
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
         </div>
-        <form action="/new" method="POST">
-          <input type="text" name="name"></input>
-          <input type="text" name="description"></input>
-          <input type="submit"></input>
-        </form>
-        {% for item in items %}
-          <h1> {{ item.name }} </h1>
-          <p> {{ item.description }} <p>
-        {% endfor %}
-
         <script src="/static/js/jquery-2.2.4.js"></script>
         <script src="/static/js/bootstrap.js"></script>
     </body>
