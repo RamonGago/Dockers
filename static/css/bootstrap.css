@@ -89,28 +89,6 @@ p {
   margin-bottom: 1rem;
 }
 
-.footer-bottom {
-    background-color: #15224f;
-    min-height: 30px;
-    width: 100%;
-}
-.copyright {
-    color: #fff;
-    line-height: 30px;
-    min-height: 30px;
-    padding: 7px 0;
-}
-.design {
-    color: #fff;
-    line-height: 30px;
-    min-height: 30px;
-    padding: 7px 0;
-    text-align: right;
-}
-.design a {
-    color: #fff;
-}
-
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -2527,7 +2505,6 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
-  margin-top: 15px;
 }
 
 .btn-primary:hover {

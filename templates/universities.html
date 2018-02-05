@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/static/css/bootstrap.css">
         <link rel="stylesheet" href="/static/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="/static/css/style.css">
         <title>Destinos Erasmus UGR</title>
     </head>
     <body>
@@ -15,13 +16,13 @@
           <h1 class="header clearfix">Añadir destino ERASMUS</h1>
           <div class="form-group">
             <form action="/new" method="POST">
-              <div class="col-xs-4">
+              <div class="col-md-2">
                 <label for="nameUniversity">Nombre Universidad</label>
-                <input type="text" class="form-control input-sm" name="name" id="nameUniversity" placeholder="Nombre Universidad"></input>
+                <input type="text" class="form-control" name="name" id="nameUniversity" placeholder="Nombre Universidad"></input>
               </div>
-              <div class="col-xs-4">
+              <div class="col-md-2">
                 <label for="description">Descripción</label>
-                <input type="text" class="form-control input-sm" name="description" id="description" placeholder="Descripción"></input>
+                <input type="text" class="form-control" name="description" id="description" placeholder="Descripción"></input>
               </div>
               <button type="submit" class="btn btn-primary mb-2">Añadir</button>
             </form>
