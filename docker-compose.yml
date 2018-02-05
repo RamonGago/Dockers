@@ -1,10 +1,10 @@
 web:
-  build: .
+  build: compose/
   command: python -u app.py
   ports:
     - "5000:5000"
   volumes:
-    - .:/todo
+    - .:/universities
   links:
     - db
 db:
