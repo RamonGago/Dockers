@@ -30,8 +30,7 @@ def new():
 
     item_doc = {
         'name': request.form['name'],
-        'description': request.form['description'],
-        'numplaces': request.form['numplaces']
+        'description': request.form['description']
     }
     db.universitiesdb.insert_one(item_doc)
 

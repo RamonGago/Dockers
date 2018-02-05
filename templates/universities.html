@@ -24,10 +24,6 @@
                 <label for="description">Descripción</label>
                 <input type="text" class="form-control" name="description" id="description" placeholder="Descripción"></input>
               </div>
-              <div class="col-6">
-                <label for="description">Número de plazas</label>
-                <input type="text" class="form-control" name="description" id="description" placeholder="Descripción"></input>
-              </div>
               <button type="submit" class="btn btn-primary mb-2">Añadir</button>
             </form>
             <caption>Lista de Universidades</caption>
@@ -36,7 +32,6 @@
                 <tr>
                   <th scope="col">Nombre Universidad</th>
                   <th scope="col">Descripción</th>
-                  <th scope="col">Número de plazas</th>
                 </tr>
               </thead>
               <tbody>
@@ -44,7 +39,6 @@
                   <tr>
                     <td>{{ item.name }}</td>
                     <td>{{ item.description }}</td>
-                    <td>{{ item.numplaces }}</td>
                   </tr>
                 {% endfor %}
               </tbody>
