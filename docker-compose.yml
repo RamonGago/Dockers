@@ -1,7 +1,7 @@
 web:
   build: .
   dockerfile: compose/Dockerfile 
-  command: /usr/bin/python /app/app.py
+  command: /usr/bin/python /compose/app.py
   ports:
     - "5000:5000"
   volumes:
