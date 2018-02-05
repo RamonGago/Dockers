@@ -18,6 +18,12 @@ def universities():
 
     return render_template('universities.html', items=items)
 
+@app.route('/status/')
+def testStatus():
+    return jsonify({
+    'status':'OK'
+    })
+
 
 @app.route('/new', methods=['POST'])
 def new():
